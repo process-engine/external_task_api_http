@@ -28,7 +28,7 @@ export class ExternalTaskApiController {
 
   public async fetchAndLockExternalTasks(request: HttpRequestWithIdentity, response: Response): Promise<void> {
 
-    const workerId: string = request.params[restSettings.params.workerId];
+    const workerId: string = request.params.worker_id;
     const identity: IIdentity = request.identity;
 
     const payload: FetchAndLockRequestPayload = request.body;
@@ -43,8 +43,8 @@ export class ExternalTaskApiController {
 
   public async extendLock(request: HttpRequestWithIdentity, response: Response): Promise<void> {
 
-    const externalTaskId: string = request.params[restSettings.params.externalTaskId];
-    const workerId: string = request.params[restSettings.params.workerId];
+    const externalTaskId: string = request.params.external_task_id;
+    const workerId: string = request.params.worker_id;
     const identity: IIdentity = request.identity;
 
     const payload: ExtendLockRequestPayload = request.body;
@@ -56,8 +56,8 @@ export class ExternalTaskApiController {
 
   public async handleBpmnError(request: HttpRequestWithIdentity, response: Response): Promise<void> {
 
-    const externalTaskId: string = request.params[restSettings.params.externalTaskId];
-    const workerId: string = request.params[restSettings.params.workerId];
+    const externalTaskId: string = request.params.external_task_id;
+    const workerId: string = request.params.worker_id;
     const identity: IIdentity = request.identity;
 
     const payload: HandleBpmnErrorRequestPayload = request.body;
@@ -69,8 +69,8 @@ export class ExternalTaskApiController {
 
   public async handleServiceError(request: HttpRequestWithIdentity, response: Response): Promise<void> {
 
-    const externalTaskId: string = request.params[restSettings.params.externalTaskId];
-    const workerId: string = request.params[restSettings.params.workerId];
+    const externalTaskId: string = request.params.external_task_id;
+    const workerId: string = request.params.worker_id;
     const identity: IIdentity = request.identity;
 
     const payload: HandleServiceErrorRequestPayload = request.body;
@@ -82,8 +82,8 @@ export class ExternalTaskApiController {
 
   public async finishExternalTask(request: HttpRequestWithIdentity, response: Response): Promise<void> {
 
-    const externalTaskId: string = request.params[restSettings.params.externalTaskId];
-    const workerId: string = request.params[restSettings.params.workerId];
+    const externalTaskId: string = request.params.external_task_id;
+    const workerId: string = request.params.worker_id;
     const identity: IIdentity = request.identity;
 
     const payload: FinishExternalTaskRequestPayload = request.body;
