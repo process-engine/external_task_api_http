@@ -1,6 +1,6 @@
 {
   "name": "@process-engine/external_task_api_http",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Contains the REST components for handling http requests against the ExternalTasl API.",
   "main": "dist/commonjs/index.js",
   "typings": "dist/index.d.ts",
