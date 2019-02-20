@@ -9,7 +9,7 @@ const routerDiscoveryTag = require('@essential-projects/bootstrapper_contracts')
 
 function registerInContainer(container) {
   container.register('ExternalTaskApiRouter', ExternalTaskApiRouter)
-    .dependencies('ExternalTaskApiController')
+    .dependencies('ExternalTaskApiController', 'IdentityService')
     .singleton()
     .tags(routerDiscoveryTag);
 
